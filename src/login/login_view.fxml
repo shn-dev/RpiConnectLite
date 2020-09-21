@@ -1,0 +1,19 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.PasswordField?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="src.login.LoginController"
+          alignment="center" vgap="10">
+    <VBox fx:id="vbox" spacing="16">
+        <TextField promptText="Username" fx:id="username" />
+        <PasswordField promptText="Password" fx:id="pass" />
+        <TextField promptText="Host (IP)" fx:id="ip" />
+        <TextField promptText="Port" fx:id="port" />
+        <TextField promptText="Working dir" fx:id="workingDir"/>
+        <Button text="Connect" fx:id="connectBtn" onAction="#connectBtnClick"/>
+    </VBox>
+</GridPane>

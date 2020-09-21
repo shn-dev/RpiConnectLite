@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="RpiConnectLite:jar">
+    <output-path>$PROJECT_DIR$/../RpiBuild/JarOnly</output-path>
+    <root id="archive" name="RpiConnectLite.jar">
+      <element id="module-output" name="RpiConnectLite" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../JavaLibraries/jsch-0.1.55.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

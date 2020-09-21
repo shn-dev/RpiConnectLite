@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="700" prefWidth="600" fx:id="parentNode" alignment="center" hgap="10" vgap="10"  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="src.filebrowser.FileBrowserController">
+    <padding>
+        <Insets bottom="16" left="16" right="16" top="16" />
+    </padding>
+    <VBox spacing="10">
+        <TreeView prefHeight="500" prefWidth="600" fx:id="tree"/>
+        <TextArea fx:id="logger" prefHeight="200" prefWidth="600" editable="false"/>
+    </VBox>
+
+</GridPane>

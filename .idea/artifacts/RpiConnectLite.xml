@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="RpiConnectLite">
+    <output-path>$PROJECT_DIR$/../RpiBuild</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="src.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="linuxIcon" value="$PROJECT_DIR$/img/BS Logo Icon-01.png" />
+            <option name="macIcon" value="$PROJECT_DIR$/img/BS Logo Icon-01.png" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/img/BS Logo Icon-01.png" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="title" value="Remote Device Connector" />
+        <option name="vendor" value="Big Software, LLC" />
+        <option name="version" value="1" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="RpiConnectLite.jar">
+        <element id="module-output" name="RpiConnectLite" />
+      </element>
+    </root>
+  </artifact>
+</component>
