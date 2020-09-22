@@ -6,60 +6,60 @@ import com.jcraft.jsch.SftpException;
 public class FileHandling {
 
 
-    public static void getFile(String src, String dest, Connector.IConnectionStateChange failure){
+    public static void getFile(String src, String dest, Connector.IConnectionStateChange onStateChange){
         Connector.connect(new Connector.IConnection() {
             @Override
             public void deviceInteraction(ChannelSftp channel){
                 try {
                     channel.get(src, dest);
-                    failure.onSuccess();
+                    onStateChange.onSuccess();
                 } catch (SftpException e) {
-                    failure.onGenericException(e);
+                    onStateChange.onGenericException(e);
                 }
             }
 
             @Override
             public void onAuthFailure() {
-                failure.onAuthFailure();
+                onStateChange.onAuthFailure();
             }
 
             @Override
             public void onGenericException(Exception ex) {
-                failure.onGenericException(ex);
+                onStateChange.onGenericException(ex);
             }
 
             @Override
             public void onSuccess() {
-                failure.onSuccess();
+                onStateChange.onSuccess();
             }
         });
     }
 
-    public static void sendFile(String src, String dest, Connector.IConnectionStateChange failure){
+    public static void sendFile(String src, String dest, Connector.IConnectionStateChange onStateChange){
         Connector.connect(new Connector.IConnection() {
             @Override
             public void deviceInteraction(ChannelSftp channel){
                 try {
                     channel.put(src, dest);
-                    failure.onSuccess();
+                    onStateChange.onSuccess();
                 } catch (SftpException e) {
-                    failure.onGenericException(e);
+                    onStateChange.onGenericException(e);
                 }
             }
 
             @Override
             public void onAuthFailure() {
-                failure.onAuthFailure();
+                onStateChange.onAuthFailure();
             }
 
             @Override
             public void onGenericException(Exception ex) {
-                failure.onGenericException(ex);
+                onStateChange.onGenericException(ex);
             }
 
             @Override
             public void onSuccess() {
-                failure.onSuccess();
+                onStateChange.onSuccess();
             }
         });
     }

@@ -11,7 +11,7 @@ public class Popup {
     public static void issuePopup(String title, String text){
         Parent root = new GridPane();
         Label label = new Label(text);
-        Scene scene = new Scene(label, 300, 200);
+        Scene scene = new Scene(label, 600, 200);
         Stage stage = new Stage();
         stage.setTitle(title);
         stage.setScene(scene);

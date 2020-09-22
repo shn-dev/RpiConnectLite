@@ -18,4 +18,18 @@ public class Global {
     public static CredentialHandler credentialHandler;
     public static Stage loadingForm;
 
+    private static String remoteFileSeparator;
+    public static String getRemoteFileSeparator(){
+        if(credentialHandler!=null && credentialHandler.getSFTPWorkingDir()!=null){
+            if(remoteFileSeparator==null) {
+                remoteFileSeparator = credentialHandler.getSFTPWorkingDir().contains("/") ?
+                        "/" : "\\";
+            }
+            return remoteFileSeparator;
+        }
+        else{
+            throw new NullPointerException("Credentials need to be set.");
+        }
+    }
+
 }
